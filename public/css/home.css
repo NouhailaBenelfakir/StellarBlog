@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    position: relative;
+    font-family: 'poppins', sans-serif;
+    background-color: rgb(246, 243, 240);
+}
+
+::selection{
+    background: #1b1b1b;
+    color: #fff;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    background: #fff;
+    z-index: 9;
+}
+.logo{
+    margin-top: 50px;
+    width: 130px;
+    height: 130px;
+    border-radius: 7px;
+    box-shadow: 3px 20px 20px rgba(24, 22, 22, 0.6);
+}
+
+.links-container{
+    display: flex;
+    list-style: none;
+}
+
+.link{
+    padding: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.header{
+    margin-top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: url(../img/oldletters.jpeg);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    text-align: center;
+    width: 800px;
+    top: 15%;
+    left:50%;
+    padding: 30px;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 5px 22px 22px rgba(24, 22, 22, 0.6);
+    margin-bottom: 30px;
+    position: absolute;
+    background-color: rgb(235, 230, 223);
+}
+
+.heading{
+    color: #0e0a0a;
+    text-transform: capitalize;
+    font-size: 70px;
+    line-height: 60px;
+    margin-bottom: 80px;
+}
+
+.heading .small{
+    display: block;
+    font-size: 40px;
+}
+.heading .moyen{
+    font-size: 52px;
+}
+
+.heading .no-fill{
+    font-style: italic;
+    color: transparent;
+    -webkit-text-stroke: 2px #0b0a0a;
+    font-size: 34px;
+}
+
+.btn{
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(193, 153, 101);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+}
+
+.blogs-section{
+    width: 100%;
+    padding: 50px 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 80px;
+}
+
+.blog-image{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.blog-overview{
+    margin: 10px 0 20px;
+    line-height: 30px;
+}
+
+.btn.dark{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(193, 153, 101);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+}

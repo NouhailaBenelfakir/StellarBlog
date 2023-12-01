@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Playfair Display',serif;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url(oldletters.jpeg);
+  }
+  
+  .container {
+    text-align: center;
+    width: 700px;
+    top: 50%;
+    left:50%;
+    background-color: white;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    position: absolute;
+    background-color: rgb(235, 230, 223);
+  
+  }
+  #title{
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  #subtitle::after{
+    content: '';
+    left: 50%;
+    width: 20px;
+    height: 3px;
+  
+  }
+  .container blockquote{
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container blockquote::before, .container blockquote::after{
+    content: '"';
+  }
+  .container span{
+    float: right;
+    margin-bottom: 30px;
+    position: relative;
+    font-size: 20px;
+  } 
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(193, 153, 101);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+  }
+  

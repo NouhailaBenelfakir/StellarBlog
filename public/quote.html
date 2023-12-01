@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="quote.css">
+  <title>Stellar Thoughts</title>
+  <style>
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Playfair Display',serif;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url(img/oldletters.jpeg);
+  }
+  
+  .container {
+    text-align: center;
+    width: 700px;
+    top: 50%;
+    left:50%;
+    background-color: white;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    box-shadow: 2px 20px 20px rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    position: absolute;
+    background-color: rgb(235, 230, 223);
+  
+  }
+  #title{
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  #subtitle::after{
+    content: '';
+    left: 50%;
+    width: 20px;
+    height: 3px;
+  
+  }
+  .container blockquote{
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container blockquote::before, .container blockquote::after{
+    content: '"';
+  }
+  .container span{
+    float: right;
+    margin-bottom: 30px;
+    position: relative;
+    font-size: 20px;
+  } 
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(193, 153, 101);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stellar Thoughts</h1>
+    <h4 id="subtitle">Where Insight Sparkles Through Words</h4>
+    <blockquote id="quoteText">Loading...</blockquote>
+    <span id="quoteAuthor">Loading...</span>
+    <button id="getQuoteBtn" onclick="getQuote(url_quote)">Get Quote</button>
+  </div>
+  <script>
+    const url_quote="https://api.quotable.io/random";
+    const quoteText = document.getElementById("quoteText");
+    const quoteAuthor = document.getElementById("quoteAuthor");
+
+    async function getQuote(url){
+      const response = await fetch(url_quote);
+      var data = await response.json();
+      quoteText.innerHTML = data.content;
+      quoteAuthor.innerHTML = data.author;
+    };
+
+  </script>
+</body>
+</html>
