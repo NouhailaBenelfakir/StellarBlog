@@ -3,19 +3,21 @@ let blogId = decodeURI(location.pathname.split("/").pop());
 let docRef = db.collection("blogs").doc(blogId);
 
 docRef.get().then((doc) => {
-    if(doc.exists){
+    if (doc.exists) {
+        console.log('Blog data retrieved:', doc.data()); // Debug log
         setupBlog(doc.data());
-    } else{
+    } else {
         location.replace("/");
     }
-})
+});
 
 const setupBlog = (data) => {
     const banner = document.querySelector('.banner');
     const blogTitle = document.querySelector('.title');
     const titleTag = document.querySelector('title');
     const publish = document.querySelector('.published');
-    
+
+    console.log('Banner image URL:', data.bannerImage); // Debug log
     banner.style.backgroundImage = `url(${data.bannerImage})`;
 
     titleTag.innerHTML += blogTitle.innerHTML = data.title;
@@ -23,7 +25,8 @@ const setupBlog = (data) => {
 
     const article = document.querySelector('.article');
     addArticle(article, data.article);
-}
+};
+
 
 const addArticle = (ele, data) => {
     data = data.split("\n").filter(item => item.length);

@@ -1,10 +1,11 @@
 {
   "name": "stellarblog",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,13 @@
     "express.js": "^1.0.0",
     "firebase": "^10.6.0",
     "nodemon": "^3.0.1"
-  }
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.1.0",
+    "@testing-library/jest-dom": "^6.4.5",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "keywords": [],
+  "description": ""
 }
