@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="5" failures="0" errors="0" time="3.452">
-  <testsuite name="Blog Platform Tests" errors="0" failures="0" skipped="0" timestamp="2024-07-06T09:19:02" time="1.76" tests="2">
-    <testcase classname="Blog Platform Tests should update banner image on upload" name="Blog Platform Tests should update banner image on upload" time="0.012">
-    </testcase>
-    <testcase classname="Blog Platform Tests should publish blog with title and content" name="Blog Platform Tests should publish blog with title and content" time="0.002">
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="2.359">
+  <testsuite name="Blog Page Tests" errors="0" failures="0" skipped="0" timestamp="2024-07-06T09:33:18" time="1.067" tests="1">
+    <testcase classname="Blog Page Tests should retrieve and display blog data" name="Blog Page Tests should retrieve and display blog data" time="0.021">
     </testcase>
   </testsuite>
-  <testsuite name="Blog Page Tests" errors="0" failures="0" skipped="0" timestamp="2024-07-06T09:19:02" time="1.745" tests="2">
-    <testcase classname="Blog Page Tests should retrieve and display blog data" name="Blog Page Tests should retrieve and display blog data" time="0.022">
+  <testsuite name="Blog Platform Tests" errors="0" failures="0" skipped="0" timestamp="2024-07-06T09:33:18" time="1.077" tests="2">
+    <testcase classname="Blog Platform Tests should update banner image on upload" name="Blog Platform Tests should update banner image on upload" time="0.018">
     </testcase>
-    <testcase classname="Blog Page Tests should handle missing blog data" name="Blog Page Tests should handle missing blog data" time="0.002">
+    <testcase classname="Blog Platform Tests should publish blog with title and content" name="Blog Platform Tests should publish blog with title and content" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="Blog Page Tests" errors="0" failures="0" skipped="0" timestamp="2024-07-06T09:19:02" time="1.764" tests="1">
-    <testcase classname="Blog Page Tests should retrieve and display blog data" name="Blog Page Tests should retrieve and display blog data" time="0.011">
+  <testsuite name="Blog Page Tests" errors="0" failures="0" skipped="0" timestamp="2024-07-06T09:33:18" time="1.076" tests="2">
+    <testcase classname="Blog Page Tests should retrieve and display blog data" name="Blog Page Tests should retrieve and display blog data" time="0.032">
+    </testcase>
+    <testcase classname="Blog Page Tests should handle missing blog data" name="Blog Page Tests should handle missing blog data" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
