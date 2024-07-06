@@ -27,6 +27,7 @@ test:
   stage: test
   script:
     - echo "Running tests..."
+    - echo $TESTVARIABLE
     #- npm test
   artifacts:
     reports:
