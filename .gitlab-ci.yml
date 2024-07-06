@@ -13,6 +13,7 @@ before_script:
   - curl -sL https://deb.nodesource.com/setup_18.x | bash -
   - apt-get install -y nodejs
   - npm install
+  - export PATH="./node_modules/.bin:$PATH"
 
 build:
   stage: build
@@ -28,8 +29,8 @@ test:
     - echo "Running tests..."
     - npm test
   artifacts:
-    #reports:
-      #junit: junit.xml
+    reports:
+      junit: junit.xml
 
 deploy:
   stage: deploy
