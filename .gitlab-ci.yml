@@ -3,14 +3,14 @@ stages:
   - test
   - deploy
 
-
-
 cache:
-  key: "$CI_COMMIT_REF_SLUG"  
+  key: "$CI_COMMIT_REF_SLUG"
   paths:
     - node_modules/
 
 before_script:
+  - echo "Before script running..."
+  - ls -al node_modules || echo "node_modules not found"
   - apt-get update -y
   - apt-get install -y curl
   - curl -sL https://deb.nodesource.com/setup_18.x | bash -
@@ -39,5 +39,4 @@ test:
 deploy:
   stage: deploy
   script:
-    - echo "Deploying ..."
-
+    - echo "Deploying..."
