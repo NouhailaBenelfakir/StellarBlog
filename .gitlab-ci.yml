@@ -3,9 +3,12 @@ stages:
   - test
   - deploy
 
-#variables:
-  #NODE_ENV: 'development'
-  #FIREBASE_TOKEN: $FIREBASE_TOKEN
+
+
+cache:
+  key: "$CI_COMMIT_REF_SLUG"  
+  paths:
+    - node_modules/
 
 before_script:
   - apt-get update -y
@@ -36,7 +39,5 @@ test:
 deploy:
   stage: deploy
   script:
-    - echo "Deploying to Firebase..."
-    - npm install -g firebase-tools
-    #- firebase deploy --token $FIREBASE_TOKEN
+    - echo "Deploying ..."
 
