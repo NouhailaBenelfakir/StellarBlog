@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express-fileupload": "^1.4.3",
+    "express-fileupload": "^1.5.0",
     "express.js": "^1.0.0",
     "firebase": "^10.6.0",
     "nodemon": "^3.0.1"
