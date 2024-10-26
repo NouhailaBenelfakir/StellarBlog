@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s  # Interval de récupération des métriques
+
+scrape_configs:
+  - job_name: 'node_app'
+    static_configs:
+      - targets: ['localhost:3000']  # L'URL de l'application Node.js exposant les métriques

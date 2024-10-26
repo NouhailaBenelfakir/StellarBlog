@@ -89,14 +89,14 @@
     <button id="getQuoteBtn" onclick="getQuote(url_quote)">Get Quote</button>
   </div>
   <script>
-    const url_quote="https://api.quotable.io/random";
+    const url_quote="https://api.api-ninjas.com/v1/quotes?category=happiness";
     const quoteText = document.getElementById("quoteText");
     const quoteAuthor = document.getElementById("quoteAuthor");
 
     async function getQuote(url){
       const response = await fetch(url_quote);
       var data = await response.json();
-      quoteText.innerHTML = data.content;
+      quoteText.innerHTML = data.quote;
       quoteAuthor.innerHTML = data.author;
     };
 
