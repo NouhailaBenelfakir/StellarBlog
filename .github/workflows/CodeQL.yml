@@ -3,9 +3,9 @@ name: "CodeQL Analysis"
 # Trigger CodeQL analysis on pushes to the main branch and on pull requests.
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 # Define the job for CodeQL analysis.
 jobs:
