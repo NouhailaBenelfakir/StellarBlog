@@ -1,0 +1,29 @@
+name: "CodeQL Analysis"
+
+# Trigger CodeQL analysis on pushes to the main branch and on pull requests.
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+# Define the job for CodeQL analysis.
+jobs:
+  analyze:
+    name: Analyze Code with CodeQL
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initialize the CodeQL tool for JavaScript.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: javascript  # Specify JavaScript as the language
+        queries: security-and-quality 
+
+    # Run the CodeQL analysis
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
